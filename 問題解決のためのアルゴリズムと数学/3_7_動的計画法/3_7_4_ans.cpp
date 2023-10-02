@@ -19,7 +19,7 @@ int main() {
 		for (int j = 0; j <= S; j++) {
 			// j < A[i] のとき、カード i は選べない
 			if (j < A[i]) dp[i][j] = dp[i-1][j];
-			// j >= A[i] のとき、選ぶ / 選ばない 両方の選択肢がある
+			// j >= A[i] のとき、選ぶ / ばない 両方の選択肢がある
 			if (j >= A[i]) {
 				if (dp[i-1][j] == true || dp[i-1][j-A[i]] == true) dp[i][j] = true;
 				else dp[i][j] = false;
